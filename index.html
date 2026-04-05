@@ -6,33 +6,33 @@
     <title>Movie Stream</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
+<script src="https://kit.fontawesome.com/ea28b5c05f.js" crossorigin="anonymous"></script>
 <body>
     
     <!-- left side -->
     <div class="flex-container" >
-        <div style="background-color: #3c3c3c;">
+        <div class="left-section">
             <ul>
                 <li>MENU</li>
                 <ul>
-                    <li>Home</li>
-                    <li>Discover</li>
+                    <li><i class="fa-solid fa-house"></i> Home</li>
+                    <li><i class="fa-solid fa-compass"></i> Discover</li>
                     <HR>
                 </ul>
                 
                 <li>LIBRARY</li>
                 <ul>
-                    <li>Recent</li>
-                    <li>Bookmarked</li>
-                    <li>Liked</li>
-                    <li>Top Rated</li>
+                    <li><i class="fa-solid fa-clock"></i> Recent</li>
+                    <li><i class="fa-solid fa-bookmark"></i> Bookmark</li>
+                    <li><i class="fa-solid fa-heart"></i> Liked</li>
+                    <li><i class="fa-solid fa-stairs"></i> Top Rated</li>
                     <HR>
                 </ul>
                 <li>GENERAL</li>
                 <ul>
-                    <li>Setting</li>
-                    <li>Help</li>
-                    <li>LOGOUT</li>
+                    <li><i class="fa-solid fa-gear"></i> Setting</li>
+                    <li><i class="fa-solid fa-question"></i> Help</li>
+                    <li><i class="fa-solid fa-arrow-right-from-bracket"></i> LOGOUT</li>
                 </ul>
                 
             </ul>
@@ -48,10 +48,10 @@
                     <li>Animations</li>
                 </ul>
             </div>
-            <div>
-                <img src="image/barbie-big.png" style="max-width: 100%;display: block; border-radius: 10px;">    
+            <div >
+                <img src="image/barbie-big.png" class="banner">    
             </div>
-            <div style="margin:10px;">CONTINUE WATCHING</div>
+            <div style="margin:10px;"><h1>CONTINUE WATCHING</h1></div>
             <div class="container">
                 
                     <div class="card">
@@ -61,9 +61,9 @@
                         <div class="right">
                             <div class="top">
                                 <h3>Halloween</h3>
-                                <div class="heart">♡</div>
+                                <div class="heart"><i class="fa-regular fa-heart" style="font-size: 24px;"></i></div>
                             </div>
-                            <div class="genre">
+                            <div class="genre_card">
                                 <span>Drama</span>
                                 <span>Western</span>
                             </div>
@@ -72,20 +72,17 @@
                             </div>
                         </div>
                     </div>
-
-            
-                <div>
 
                     <div class="card">
                         <div class="left">
-                            <img src="/image/halloween.jpg">
+                            <img src="/image/green_knight.jpg">
                         </div>
                         <div class="right">
                             <div class="top">
-                                <h3>Halloween</h3>
-                                <div class="heart">♡</div>
+                                <h3>The Green Knight</h3>
+                                <div class="heart"><i class="fa-regular fa-heart" style="font-size: 24px;"></i></div>
                             </div>
-                            <div class="genre">
+                            <div class="genre_card">
                                 <span>Drama</span>
                                 <span>Western</span>
                             </div>
@@ -94,24 +91,39 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
             </div>
-            <div style="margin:10px">RECOMMENED FOR YOU</div>
+            <div style="margin:10px"><h1>RECOMMENED FOR YOU</h1></div>
             <div class="grid_mid">
                     <div>
                         <img src="image/avengers.jpg">
-                        <div class="favorite">♥</div>
-                        <div class="play">▶</div>
-                        <div class="info">
-                            <h3>Avengers</h3>
-                            <span>2012</span>
+                        <div class="transbox">
+                            <i class="fa-solid fa-play" ></i>
+                            AVENGERS <span><i class="fa-solid fa-star" style="color:yellow"></i>4.8</span>  
                         </div>
-                        <div class="rating">⭐ 4.8</div>
+
+    
                     </div>
-                    <div><img src="image/barbie.png"></div>
-                    <div><img src="image/oppenheimar.png"></div>  
-                    <div><img src="image/xmen.jpg"></div>
+                    <div>
+                        <img src="image/barbie.png">
+                        <div class="transbox">
+                            <i class="fa-solid fa-play"></i>
+                            BARBIE   <span><i class="fa-solid fa-star" style="color:yellow"></i>4.8</span></div>
+                    </div>
+                    <div>
+                        <img src="image/oppenheimar.png">
+                        <div class="transbox">
+                            <i class="fa-solid fa-play"></i>
+                            OPPENHEIMAR  <span><i class="fa-solid fa-star" style="color:yellow" ></i>4.8</span> </div>
+                    
+                    </div>  
+                    <div>
+                        <img src="image/xmen.jpg">
+                        <div class="transbox">
+                            <i class="fa-solid fa-play"></i>
+                            X-MEN   <span><i class="fa-solid fa-star" style="color:yellow" ></i>4.8</span>
+                        </div>
+                    </div>
 
             </div>
 
@@ -121,7 +133,7 @@
         </div>
 
         <!-- right side  -->
-        <div style="background-color: #3c3c3c ;">
+        <div class="right-section">
             
             <!-- <img src="image/barbie.png" style="border-radius: 10px; object-fit: contain;width: 100%;height: 100%;"> -->
              <div class="chip" style="margin: 10px;">
@@ -149,8 +161,21 @@
                 </div>
                 <div style="margin:20px;">NEW TRAILERS</div>
 
-                <div class="newtrailer"><img src="/image/all.jpg" style="height:190px;width:300px;border-radius: 10px;"></div>
-                <div class="newtrailer"><img src="/image/barbie-big.png" style="height:190px;width:300px;border-radius: 10px;"></div>
+                <div class="newtrailer">
+                    <img src="/image/all.jpg" style="height:190px;width:100%;border-radius: 10px;object-fit: cover; ">
+                    <div class="newtrans">
+                            <i class="fa-solid fa-play" ></i>
+                            ALL <span><i class="fa-solid fa-star" style="color:yellow"></i>4.8</span>  
+                        </div>
+                
+                </div>
+                <div class="newtrailer">
+                    <img src="/image/barbie-big.png" style="height:190px;width:100%;border-radius: 10px; object-fit: cover;">
+                    <div class="newtrans">
+                            <i class="fa-solid fa-play" ></i>
+                            Barbie <span><i class="fa-solid fa-star" style="color:yellow"></i>4.8</span>  
+                        </div>
+                </div>
 
                 <div class="upgrade">
                     <h4>UPGRADE PRO+</h4>

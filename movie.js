@@ -68,3 +68,16 @@ document.querySelector(".moregenre").addEventListener("click", () => {
     item.style.display = "block"; 
   });
 });
+
+//favorite
+
+document.querySelectorAll(".heart").forEach(div => {
+  const icon = div.querySelector("i");  
+
+  div.addEventListener("click", () => {
+    div.classList.toggle("active");
+
+    icon.classList.toggle("fa-solid");
+    icon.classList.toggle("fa-regular");
+  });
+});
