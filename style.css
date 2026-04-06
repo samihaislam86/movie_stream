@@ -1,122 +1,115 @@
-
-body{
-    background-color: #1e1e1e;
-    color:whitesmoke
+body {
+  background-color: #1e1e1e;
+  color: whitesmoke;
 }
 
-.left-section{
-    width:15%;
-    background-color: #3c3c3c;
-    position: relative; 
+.left-section {
+  width: 15%;
+  background-color: #3c3c3c;
+  position: relative;
 }
 
-
-.right-section{
-    width:25%;
-    background-color: #3c3c3c;
-    position: relative; 
-
+.right-section {
+  width: 25%;
+  background-color: #3c3c3c;
+  position: relative;
 }
 
-div.flex-container{
-    display:flex;
-    justify-content: space-between; 
-    flex-direction: row; 
+div.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  /* fix: by default flex uses row. no need to write it again */
 }
 
-p, h1, h2,li,ul {
+p,
+h1,
+h2,
+li,
+ul {
   background: none;
 }
-
+/* fix: what is the purpose of this? they by default have no background */
 
 div.flex-container > div {
   margin: 10px;
   border-radius: 10px;
   /* background-color: #3c3c3c; */
-  /*height: ;*/  
+  /*height: ;*/
 }
 
-div.flex-container > div h2{
-    text-align: center;
+div.flex-container > div h2 {
+  text-align: center;
 }
 
-div > ul {    
-    padding: 10px;
-    list-style-type: none;        
+div > ul {
+  padding: 10px;
+  list-style-type: none;
 }
 
-
-ul ul{
-    padding: 10px;
-    list-style-type: none;
-    color:gainsboro;   
+ul ul {
+  padding: 10px;
+  list-style-type: none;
+  color: gainsboro;
 }
 
-ul ul li{
-    padding:20px;
-    border-radius: 10px;
-    color:gainsboro;
-    position:relative;    
+ul ul li {
+  padding: 20px;
+  border-radius: 10px;
+  color: gainsboro;
+  position: relative;
+}
+/* fix: try to avoid styling with nesting. use class names */
+ul ul li:hover {
+  background-color: #4d4d4d;
+  cursor: pointer;
+  color: red;
 }
 
-ul ul li:hover{
-    background-color: #4d4d4d;
-    cursor: pointer;
-    color:red;    
+ul ul li.selected {
+  background-color: red;
+  color: whitesmoke;
 }
 
-ul ul li.selected{
-    background-color: red;
+.logout {
+  position: absolute;
+  bottom: 10px;
+  /* fix: instead of position use margin top auto  */
+}
+
+ul.nav {
+  display: flex;
+  justify-content: left;
+}
+ul.nav li {
+  display: block;
+  padding: 3px 5px;
+  color: gainsboro;
+}
+
+ul.nav :hover {
+  background-color: #4d4d4d;
+  cursor: pointer;
   color: whitesmoke;
 
+  border-radius: 10px;
 }
-
-.logout{
-    position: absolute;
-    bottom: 10px;
-}
-
-ul.nav{
-    display: flex;
-    justify-content: left;
-    
-}
-ul.nav li{
-    display:block;
-    padding: 3px 5px; 
-    color:gainsboro;
-}
-
-
-
-ul.nav :hover{
-    background-color: #4d4d4d;
-    cursor: pointer;
-    color:whitesmoke;
-
-    border-radius: 10px;
-
-}
-
-
-
 
 .topnav {
-     background-color: #3c3c3c;
-     cursor: pointer;
-     border-radius: 10px;
-
-
+  background-color: #3c3c3c;
+  cursor: pointer;
+  /* fix:  cursor:pointer on the whole bar is confusing. It should only be on the individual items */
+  border-radius: 10px;
 }
-.main_container{
-    width: 60%;          
+.main_container {
+  width: 60%;
   /* margin: 0 ; */
 }
 
-.banner{
-    width:100%;
-    height:500px;
-    border-radius: 10px;
+.banner {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .container {
@@ -126,7 +119,6 @@ ul.nav :hover{
   padding: 5px;
   gap: 5px;
   /* margin: 10px; */
-  
 }
 .container div {
   background-color: #3c3c3c;
@@ -139,7 +131,7 @@ ul.nav :hover{
 
 /* continue watching card */
 .card {
-  display: flex;          
+  display: flex;
   gap: 15px;
   background: #1e1e1e;
   /* padding: 15px; */
@@ -153,39 +145,31 @@ ul.nav :hover{
   gap: 10px;
 }
 
-.genre_card span{
-    background-color:#4d4d4d;
-    color:white;
-     padding: 5px 10px;  
-    /* gap: 5px; */
-    /* display: flex; */
-    /* flex-direction: row; */
- 
-    border-radius: 10px;
-    display: inline-block; 
-    margin: 0;              
+.genre_card span {
+  background-color: #4d4d4d;
+  color: white;
+  padding: 5px 10px;
+  /* gap: 5px; */
+  /* display: flex; */
+  /* flex-direction: row; */
 
+  border-radius: 10px;
+  display: inline-block;
+  margin: 0;
 }
 
 .progress {
-    
-
-    text-align: center;
-    display: flex;
-    gap:10px;
-
-
+  text-align: center;
+  display: flex;
+  gap: 10px;
 }
-.progress p{
-    color:white;
-
+.progress p {
+  color: white;
 }
 
-.progress input{
-    flex:1;
-
+.progress input {
+  flex: 1;
 }
-
 
 /* profile chip */
 .chip {
@@ -196,25 +180,26 @@ ul.nav :hover{
   line-height: 50px;
   border-radius: 25px;
   background-color: #3c3c3c;
-  color:whitesmoke;
+  color: whitesmoke;
 }
 
 .chip img {
   float: left;
   margin: 0 10px 0 -25px;
+  /* fix: don't use margin in style and then negative margin in class names */
+  /* fix: use flex if needed not float, margin */
   height: 50px;
   width: 50px;
   border-radius: 50%;
 }
 
-.genre{
+.genre {
   display: grid;
   grid-template-columns: auto auto auto;
   background-color: #3c3c3c;
   padding: 7px;
   gap: 5px;
   margin: 10px;
-  
 }
 .genre div {
   background-color: #4d4d4d;
@@ -225,11 +210,10 @@ ul.nav :hover{
   border-radius: 20px;
 }
 
-.genre div:hover{
-    background-color: red;
-    cursor: pointer;
-    color:whitesmoke;
-
+.genre div:hover {
+  background-color: red;
+  cursor: pointer;
+  color: whitesmoke;
 }
 
 .genre div.selected {
@@ -237,167 +221,142 @@ ul.nav :hover{
   color: whitesmoke;
 }
 
-.genrehidden{
-    display: none;
+.genrehidden {
+  display: none;
 }
 
-.moregenre{
-    background-color: #4d4d4d;
+.moregenre {
+  background-color: #4d4d4d;
 }
 
-.upgrade{
-    background-color: red;
-    color:whitesmoke;
-    border-radius: 10px;
-    /* padding:10px; */
-    margin:10px; 
-    text-align: center;
-    position: absolute;
-    bottom: 10px;
-    width:100%;
-    
+.upgrade {
+  background-color: red;
+  color: whitesmoke;
+  border-radius: 10px;
+  /* padding:10px; */
+  margin: 10px;
+  /* fix: margin is not needed, causing layout issues, use width auto and left,right  if margin is needed */
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
 }
 
-.upgrade div{
-    background-color: #000;
-    color:whitesmoke;
-    border-radius: 10px;
-    padding:10px;
-    margin:10px;
-    text-align: center;
-    
-
+.upgrade div {
+  background-color: #000;
+  color: whitesmoke;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
 }
 
-.upgrade div:hover{
-    background-color: white;
-    cursor: pointer;
-    color :black;
-
+.upgrade div:hover {
+  background-color: white;
+  cursor: pointer;
+  color: black;
 }
 
-.newtrailer{
-    background-color: #3c3c3c;
-    color:whitesmoke;
-    border-radius: 10px; 
-     /* padding:10px;  */
-     margin:10px; 
-    /* text-align: center; */
-    position:relative;
-    overflow: hidden;
+.newtrailer {
+  background-color: #3c3c3c;
+  color: whitesmoke;
+  border-radius: 10px;
+  /* padding:10px;  */
+  margin: 10px;
+  /* text-align: center; */
+  position: relative;
+  overflow: hidden;
 }
 
-.newtrailer div{
-    background-color: #000;
-    color:whitesmoke;
-    border-radius: 10px; 
-    padding:10px; 
-    /* margin:10px; */
-    text-align: center;
-    
-    
-
+.newtrailer div {
+  background-color: #000;
+  color: whitesmoke;
+  border-radius: 10px;
+  padding: 10px;
+  /* margin:10px; */
+  text-align: center;
 }
 
-.newtrailer div.newtrans{
-    position: absolute; 
-  bottom: 0;     
+.newtrailer div.newtrans {
+  position: absolute;
+  bottom: 0;
   left: 0;
-  right:0;
-  width: 100%;  
+  right: 0;
+  width: 100%;
 
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(5px);
-  color:white;
+  color: white;
   -webkit-backdrop-filter: blur(5px);
   padding: 10px;
-   box-sizing: border-box;   
+  box-sizing: border-box;
   /* border-radius: 10px; */
-  display:flex;
-  justify-content:space-between;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-
 }
-
-
 
 .grid_mid {
   display: grid;
   grid-template-columns: auto auto auto auto;
   background-color: #1e1e1e;
-  gap:10px;
-  
-  
+  gap: 10px;
 }
 .grid_mid div {
-   
   color: #000;
-  
-  
+
   font-size: 15px;
   /* text-align: center; */
   border-radius: 20px;
-   position: relative;
-   overflow: hidden;
-   
-  
+  position: relative;
+  overflow: hidden;
 }
 
-.grid_mid div img{
-    height:250px;
-    width:100%;
-    border-radius: 10px;
-    
-    
-    object-fit: cover; 
-    
+.grid_mid div img {
+  height: 250px;
+  width: 100%;
+  border-radius: 10px;
 
+  object-fit: cover;
 }
 
 div.transbox {
-  position: absolute; 
-  bottom: 0;     
+  position: absolute;
+  bottom: 0;
   left: 0;
-  right:0;
-  width: 100%;  
+  right: 0;
+  width: 100%;
 
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(5px);
-  color:white;
+  color: white;
   -webkit-backdrop-filter: blur(5px);
 
-  box-sizing: border-box;   
+  box-sizing: border-box;
 
-
-  padding: 10px; 
+  padding: 10px;
   border-radius: 10px;
-  display:flex;
-  justify-content:space-evenly;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-
-
-
 .top {
   display: flex;
-  justify-content: space-between;  
-  align-items: center; 
-  
+  justify-content: space-between;
+  align-items: center;
 }
 
-.top h3{
-    color:white;
+.top h3 {
+  color: white;
 }
 
-.top div i{
-    font-size: 24px;
-     
-    /* background-color: #4d4d4d;  */
-    border-radius: 10px;
-    color:white;
-    
+.top div i {
+  font-size: 24px;
 
+  /* background-color: #4d4d4d;  */
+  border-radius: 10px;
+  color: white;
 }
 
 .left img {
@@ -408,20 +367,18 @@ div.transbox {
 }
 
 .right {
-  flex: 1;                 
+  flex: 1;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   gap: 10px;
-  
 }
 
-div.heart{
-    margin: 10px;
-    border-radius: 10px;
-    background-color: #4d4d4d;
-    transition: 0.2s;
-    color:white;
-
+div.heart {
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #4d4d4d;
+  transition: 0.2s;
+  color: white;
 }
 
 .fa-heart.fa-solid {
