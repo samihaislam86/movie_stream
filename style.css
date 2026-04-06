@@ -1,386 +1,479 @@
 body {
-  background-color: #1e1e1e;
-  color: whitesmoke;
-}
-
-.left-section {
-  width: 15%;
-  background-color: #3c3c3c;
-  position: relative;
-}
-
-.right-section {
-  width: 25%;
-  background-color: #3c3c3c;
-  position: relative;
+    background-color: #1e1e1e;
+    color: whitesmoke;
+    overflow: hidden;
 }
 
 div.flex-container {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  /* fix: by default flex uses row. no need to write it again */
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    
+
 }
 
-p,
-h1,
-h2,
-li,
-ul {
-  background: none;
-}
-/* fix: what is the purpose of this? they by default have no background */
 
-div.flex-container > div {
-  margin: 10px;
-  border-radius: 10px;
-  /* background-color: #3c3c3c; */
-  /*height: ;*/
+
+div.flex-container>div {
+    margin: 10px;
+    border-radius: 10px;
+
 }
 
-div.flex-container > div h2 {
-  text-align: center;
+div.flex-container>div h2 {
+    text-align: center;
 }
 
-div > ul {
-  padding: 10px;
-  list-style-type: none;
+
+
+/* left section starts */
+.left-section {
+    width: 15%;
+    background-color: #3c3c3c;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+
+}
+/* title of the menu */
+.title {
+    padding: 10px;
+    list-style-type: none;
+    color: gainsboro;
+    margin: 10px;
+}
+/* menus */
+.menu {
+    padding: 20px;
+    border-radius: 10px;
+    color: gainsboro;
+    position: relative;
+    list-style-type: none;
+
 }
 
-ul ul {
-  padding: 10px;
-  list-style-type: none;
-  color: gainsboro;
+.menu:hover {
+    background-color: #4d4d4d;
+    cursor: pointer;
+    color: red;
+
 }
 
-ul ul li {
-  padding: 20px;
-  border-radius: 10px;
-  color: gainsboro;
-  position: relative;
-}
-/* fix: try to avoid styling with nesting. use class names */
-ul ul li:hover {
-  background-color: #4d4d4d;
-  cursor: pointer;
-  color: red;
+
+
+.menu.selected {
+    background-color: red;
+    color: whitesmoke;
 }
 
-ul ul li.selected {
-  background-color: red;
-  color: whitesmoke;
-}
-
+/* logout in menu */
 .logout {
-  position: absolute;
-  bottom: 10px;
-  /* fix: instead of position use margin top auto  */
+
+    margin-top: auto;
+    padding: 20px;
+    border-radius: 10px;
+
+
 }
 
-ul.nav {
-  display: flex;
-  justify-content: left;
-}
-ul.nav li {
-  display: block;
-  padding: 3px 5px;
-  color: gainsboro;
+
+.logout:hover {
+    background-color: #4d4d4d;
+    cursor: pointer;
+    color: red;
+
 }
 
-ul.nav :hover {
-  background-color: #4d4d4d;
-  cursor: pointer;
-  color: whitesmoke;
+.logout.selected {
+    background-color: red;
+    color: whitesmoke;
 
-  border-radius: 10px;
 }
 
-.topnav {
-  background-color: #3c3c3c;
-  cursor: pointer;
-  /* fix:  cursor:pointer on the whole bar is confusing. It should only be on the individual items */
-  border-radius: 10px;
-}
-.main_container {
-  width: 60%;
-  /* margin: 0 ; */
+hr{
+    width: 70%;             
+  margin: 10px auto;       
+  border: none;            
+  height: 2px;             
+  background-color:#4d4d4d;   
+
 }
 
+/* left section end */
+
+/* right section start */
+
+.right-section {
+    width: 25%;
+    background-color: #3c3c3c;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* scroll the right part */
+.scrollable_content {
+    overflow-y: auto;
+
+}
+
+.scrollable_content::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* profile chip */
+.chip {
+    display: inline-block;
+    padding: 10px 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #3c3c3c;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+}
+
+.chip img {
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+/* genres */
+.genre {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #3c3c3c;
+    padding: 7px;
+    gap: 5px;
+    margin: 10px;
+}
+
+.genre div {
+    background-color: #4d4d4d;
+    color: whitesmoke;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.genre div:hover {
+    background-color: red;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.genre div.selected {
+    background-color: red;
+    color: whitesmoke;
+}
+
+.genrehidden {
+    display: none;
+}
+
+/* upgrade to pro */
+.upgrade {
+    background-color: red;
+    color: whitesmoke;
+    border-radius: 10px;
+    width: auto;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+
+
+}
+
+.upgrade div {
+    background-color: #000;
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.upgrade div:hover {
+    background-color: white;
+    cursor: pointer;
+    color: black;
+}
+
+/* newtrailer card */
+.newtrailer {
+    background-color: #3c3c3c;
+    color: whitesmoke;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.newtrailer img {
+    height: 190px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.newtrailer div {
+    background-color: #000;
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+
+    text-align: center;
+}
+
+.newtrailer div.newtrans {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    color: white;
+    -webkit-backdrop-filter: blur(5px);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* +40 genres */
+.moregenre {
+    background-color: #4d4d4d;
+}
+
+/* right section end */
+
+
+
+/* middle section start */
+.middle_container {
+
+    flex: 1;
+    overflow-y: auto;
+
+}
+
+.middle_container::-webkit-scrollbar {
+    display: none;
+}
+
+/* horizontal nav */
+.hr_nav {
+    display: flex;
+    justify-content: left;
+    background-color: #3c3c3c;
+
+    border-radius: 10px;
+    padding:10px;
+}
+
+.hr_nav li {
+    display: block;
+    padding: 3px 5px;
+    color: gainsboro;
+}
+
+.hr_nav :hover {
+    background-color: #4d4d4d;
+    cursor: pointer;
+    color: whitesmoke;
+
+    border-radius: 10px;
+}
+
+/* big banner */
 .banner {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: auto auto;
-  /* background-color: #3c3c3c; */
-  padding: 5px;
-  gap: 5px;
-  /* margin: 10px; */
+/* genre of the movies */
+.genre_card {
+    display: flex;
+    gap: 10px;
 }
+
+.genre_card span {
+    background-color: #4d4d4d;
+    color: white;
+    padding: 5px 10px;
+
+
+    border-radius: 10px;
+    display: inline-block;
+    margin: 0;
+}
+/* continue watching progress */
+.progress {
+    text-align: center;
+    display: flex;
+    gap: 10px;
+}
+
+.progress p {
+    color: white;
+}
+
+.progress input {
+    flex: 1;
+}
+
+/* container for the continue watching part */
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    padding: 5px;
+    gap: 5px;
+
+}
+
 .container div {
-  background-color: #3c3c3c;
-  color: #000;
-  padding: 10px;
-  font-size: 15px;
-  text-align: left;
-  border-radius: 20px;
+    background-color: #3c3c3c;
+    color: #000;
+    padding: 10px;
+    font-size: 15px;
+    text-align: left;
+    border-radius: 20px;
 }
 
 /* continue watching card */
 .card {
-  display: flex;
-  gap: 15px;
-  background: #1e1e1e;
-  /* padding: 15px; */
-  border-radius: 15px;
-  color: white;
-  /* width: 400px; */
+    display: flex;
+    /* gap: 15px; */
+    background: #1e1e1e;
+
+    border-radius: 15px;
+    color: white;
+    flex-wrap: wrap;
+
 }
 
-.genre_card {
-  display: flex;
-  gap: 10px;
-}
-
-.genre_card span {
-  background-color: #4d4d4d;
-  color: white;
-  padding: 5px 10px;
-  /* gap: 5px; */
-  /* display: flex; */
-  /* flex-direction: row; */
-
-  border-radius: 10px;
-  display: inline-block;
-  margin: 0;
-}
-
-.progress {
-  text-align: center;
-  display: flex;
-  gap: 10px;
-}
-.progress p {
-  color: white;
-}
-
-.progress input {
-  flex: 1;
-}
-
-/* profile chip */
-.chip {
-  display: inline-block;
-  padding: 0 25px;
-  height: 50px;
-  font-size: 16px;
-  line-height: 50px;
-  border-radius: 25px;
-  background-color: #3c3c3c;
-  color: whitesmoke;
-}
-
-.chip img {
-  float: left;
-  margin: 0 10px 0 -25px;
-  /* fix: don't use margin in style and then negative margin in class names */
-  /* fix: use flex if needed not float, margin */
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-}
-
-.genre {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: #3c3c3c;
-  padding: 7px;
-  gap: 5px;
-  margin: 10px;
-}
-.genre div {
-  background-color: #4d4d4d;
-  color: whitesmoke;
-  padding: 10px;
-  font-size: 15px;
-  text-align: center;
-  border-radius: 20px;
-}
-
-.genre div:hover {
-  background-color: red;
-  cursor: pointer;
-  color: whitesmoke;
-}
-
-.genre div.selected {
-  background-color: red;
-  color: whitesmoke;
-}
-
-.genrehidden {
-  display: none;
-}
-
-.moregenre {
-  background-color: #4d4d4d;
-}
-
-.upgrade {
-  background-color: red;
-  color: whitesmoke;
-  border-radius: 10px;
-  /* padding:10px; */
-  margin: 10px;
-  /* fix: margin is not needed, causing layout issues, use width auto and left,right  if margin is needed */
-  text-align: center;
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-}
-
-.upgrade div {
-  background-color: #000;
-  color: whitesmoke;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
-}
-
-.upgrade div:hover {
-  background-color: white;
-  cursor: pointer;
-  color: black;
-}
-
-.newtrailer {
-  background-color: #3c3c3c;
-  color: whitesmoke;
-  border-radius: 10px;
-  /* padding:10px;  */
-  margin: 10px;
-  /* text-align: center; */
-  position: relative;
-  overflow: hidden;
-}
-
-.newtrailer div {
-  background-color: #000;
-  color: whitesmoke;
-  border-radius: 10px;
-  padding: 10px;
-  /* margin:10px; */
-  text-align: center;
-}
-
-.newtrailer div.newtrans {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px);
-  color: white;
-  -webkit-backdrop-filter: blur(5px);
-  padding: 10px;
-  box-sizing: border-box;
-  /* border-radius: 10px; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
+/* recommendations grid  */
 .grid_mid {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  background-color: #1e1e1e;
-  gap: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: #1e1e1e;
+    gap: 10px;
 }
-.grid_mid div {
-  color: #000;
 
-  font-size: 15px;
-  /* text-align: center; */
-  border-radius: 20px;
-  position: relative;
-  overflow: hidden;
+.grid_mid div {
+    color: #000;
+    font-size: 15px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 .grid_mid div img {
-  height: 250px;
-  width: 100%;
-  border-radius: 10px;
-
-  object-fit: cover;
+    height: 250px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-div.transbox {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px);
-  color: white;
-  -webkit-backdrop-filter: blur(5px);
-
-  box-sizing: border-box;
-
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.top h3 {
-  color: white;
-}
-
-.top div i {
-  font-size: 24px;
-
-  /* background-color: #4d4d4d;  */
-  border-radius: 10px;
-  color: white;
-}
-
-.left img {
-  width: 170px;
-  height: 250px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
+/* heart icon  */
 div.heart {
-  margin: 10px;
-  border-radius: 10px;
-  background-color: #4d4d4d;
-  transition: 0.2s;
-  color: white;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #4d4d4d;
+    transition: 0.2s;
+    color: white;
 }
 
 .fa-heart.fa-solid {
-  color: red;
+    color: red;
 }
+
+/* continue watching card right-side's top part */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top h3 {
+    color: white;
+}
+
+.top div i {
+    font-size: 24px;
+    border-radius: 10px;
+    color: white;
+}
+
+/* continue watching card left-side's  */
+
+.left img {
+    width: 170px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+/* continue watching card right-side */
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* transparent box on top of the recomendations */
+
+div.transbox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    color: white;
+    -webkit-backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* middle section end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

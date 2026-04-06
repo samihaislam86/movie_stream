@@ -1,166 +1,152 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movie Stream</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <script
-    src="https://kit.fontawesome.com/ea28b5c05f.js"
-    crossorigin="anonymous"
-  ></script>
-  <!-- fix: script should be inside head -->
-  <!-- using dix for everything, use main, nav tag etc too  -->
-  <body>
-    <!-- left side -->
-    <div class="flex-container">
-      <div class="left-section">
-        <ul>
-          <li>MENU</li>
-          <ul>
-            <li><i class="fa-solid fa-house"></i> Home</li>
-            <li><i class="fa-solid fa-compass"></i> Discover</li>
-            <hr />
-            <!-- fix: it should be in lowercase -->
-          </ul>
 
-          <li>LIBRARY</li>
-          <ul>
-            <li><i class="fa-solid fa-clock"></i> Recent</li>
-            <li><i class="fa-solid fa-bookmark"></i> Bookmark</li>
-            <li><i class="fa-solid fa-heart"></i> Liked</li>
-            <li><i class="fa-solid fa-stairs"></i> Top Rated</li>
-            <hr />
-          </ul>
-          <li>GENERAL</li>
-          <ul>
-            <li><i class="fa-solid fa-gear"></i> Setting</li>
-            <li><i class="fa-solid fa-question"></i> Help</li>
-            <li class="logout">
-              <i class="fa-solid fa-arrow-right-from-bracket"></i> LOGOUT
-            </li>
-          </ul>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Stream</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/ea28b5c05f.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+  <!-- left side -->
+  <div class="flex-container">
+    <nav class="left-section">
+      <div>
+        <li class="title">MENU</li>
+        <li class="menu"><i class="fa-solid fa-house"></i> Home</li>
+        <li class="menu"><i class="fa-solid fa-compass"></i> Discover</li>
+        <hr />
+        <li class="title">LIBRARY</li>
+        <li class="menu"><i class="fa-solid fa-clock"></i> Recent</li>
+        <li class="menu"><i class="fa-solid fa-bookmark"></i> Bookmark</li>
+        <li class="menu"><i class="fa-solid fa-heart"></i> Liked</li>
+        <li class="menu"><i class="fa-solid fa-stairs"></i> Top Rated</li>
+        <hr />
+        <li class="title">GENERAL</li>
+        <li class="menu"><i class="fa-solid fa-gear"></i> Setting</li>
+        <li class="menu"><i class="fa-solid fa-question"></i> Help</li>
+
       </div>
+      <div class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> LOGOUT</div>
+    </nav>
 
-      <!-- middle part -->
-      <!-- use the middle part scrollable -->
-      <div class="main_container">
-        <div class="topnav">
-          <ul class="nav">
-            <li>Home</li>
-            <li>Series</li>
-            <li>TV Shows</li>
-            <li>Animations</li>
-          </ul>
+    <!-- middle part -->
+
+    <div class="middle_container">
+
+      
+        <ul class="hr_nav">
+          <li>Home</li>
+          <li>Series</li>
+          <li>TV Shows</li>
+          <li>Animations</li>
+        </ul>
+      
+      <div>
+        <img src="image/barbie-big.png" class="banner" />
+      </div>
+      <div style="margin: 10px">
+        <h1>CONTINUE WATCHING</h1>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="left">
+            <img src="/image/halloween.jpg" />
+          </div>
+          <div class="right">
+            <div class="top">
+              <h3>Halloween</h3>
+              <div class="heart">
+                <i class="fa-regular fa-heart" style="font-size: 24px"></i>
+              </div>
+            </div>
+            <div class="genre_card">
+              <span>Drama</span>
+              <span>Western</span>
+            </div>
+            <div class="progress">
+              <input type="range" />
+              <p>04.43</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="left">
+            <img src="/image/green_knight.jpg" />
+          </div>
+          <div class="right">
+            <div class="top">
+              <h3>The Green Knight</h3>
+              <div class="heart">
+                <i class="fa-regular fa-heart" style="font-size: 24px"></i>
+              </div>
+            </div>
+            <div class="genre_card">
+              <span>Drama</span>
+              <span>Western</span>
+            </div>
+            <div class="progress">
+              <input type="range" />
+              <p>04.43</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin: 10px">
+        <h1>RECOMMENED FOR YOU</h1>
+      </div>
+      <div class="grid_mid">
+        <div>
+          <img src="image/avengers.jpg" />
+          <div class="transbox">
+            <i class="fa-solid fa-play"></i>
+            AVENGERS
+            <span><i class="fa-solid fa-star" style="color: yellow"></i>4.8</span>
+          </div>
         </div>
         <div>
-          <img src="image/barbie-big.png" class="banner" />
-        </div>
-        <div style="margin: 10px"><h1>CONTINUE WATCHING</h1></div>
-        <div class="container">
-          <div class="card">
-            <div class="left">
-              <img src="/image/halloween.jpg" />
-            </div>
-            <div class="right">
-              <div class="top">
-                <h3>Halloween</h3>
-                <div class="heart">
-                  <i class="fa-regular fa-heart" style="font-size: 24px"></i>
-                </div>
-              </div>
-              <div class="genre_card">
-                <span>Drama</span>
-                <span>Western</span>
-              </div>
-              <div class="progress">
-                <input type="range" />
-                <p>04.43</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="left">
-              <img src="/image/green_knight.jpg" />
-            </div>
-            <div class="right">
-              <div class="top">
-                <h3>The Green Knight</h3>
-                <div class="heart">
-                  <i class="fa-regular fa-heart" style="font-size: 24px"></i>
-                </div>
-              </div>
-              <div class="genre_card">
-                <span>Drama</span>
-                <span>Western</span>
-              </div>
-              <div class="progress">
-                <input type="range" />
-                <p>04.43</p>
-              </div>
-            </div>
+          <img src="image/barbie.png" />
+          <div class="transbox">
+            <i class="fa-solid fa-play"></i>
+            BARBIE
+            <span><i class="fa-solid fa-star" style="color: yellow"></i>4.8</span>
           </div>
         </div>
-        <div style="margin: 10px"><h1>RECOMMENED FOR YOU</h1></div>
-        <div class="grid_mid">
-          <div>
-            <img src="image/avengers.jpg" />
-            <div class="transbox">
-              <i class="fa-solid fa-play"></i>
-              AVENGERS
-              <span
-                ><i class="fa-solid fa-star" style="color: yellow"></i>4.8</span
-              >
-            </div>
+        <div>
+          <img src="image/oppenheimar.png" />
+          <div class="transbox">
+            <i class="fa-solid fa-play"></i>
+            OPPENHEIMAR
+            <span><i class="fa-solid fa-star" style="color: yellow"></i>4.8</span>
           </div>
-          <div>
-            <img src="image/barbie.png" />
-            <div class="transbox">
-              <i class="fa-solid fa-play"></i>
-              BARBIE
-              <span
-                ><i class="fa-solid fa-star" style="color: yellow"></i>4.8</span
-              >
-            </div>
-          </div>
-          <div>
-            <img src="image/oppenheimar.png" />
-            <div class="transbox">
-              <i class="fa-solid fa-play"></i>
-              OPPENHEIMAR
-              <span
-                ><i class="fa-solid fa-star" style="color: yellow"></i>4.8</span
-              >
-            </div>
-          </div>
-          <div>
-            <img src="image/xmen.jpg" />
-            <div class="transbox">
-              <i class="fa-solid fa-play"></i>
-              X-MEN
-              <span
-                ><i class="fa-solid fa-star" style="color: yellow"></i>4.8</span
-              >
-            </div>
+        </div>
+        <div>
+          <img src="image/xmen.jpg" />
+          <div class="transbox">
+            <i class="fa-solid fa-play"></i>
+            X-MEN
+            <span><i class="fa-solid fa-star" style="color: yellow"></i>4.8</span>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- right side  -->
-      <div class="right-section">
-        <div class="chip" style="margin: 10px">
-          <!-- fix: don't use margin in style and then negative margin in class names -->
-          <img width="96" height="96" />Samiha Islam
-          <!-- fix: image needs a source -->
-          <!-- fix: the width height in profile image is useless because the CSS overrides it anyway -->
+    <!-- right side  -->
+    <div class="right-section">
+      <div class="scrollable_content">
+        <div class="chip">
+
+          <img>Samiha Islam
+
         </div>
 
         <div style="margin: 10px">FAVORITE GENRES</div>
         <div class="genre" id="selected-text">
-          <!-- <p id="selected-text"></p> -->
+
           <div>Romance</div>
           <div>Action</div>
           <div>Drama</div>
@@ -177,51 +163,34 @@
         <div style="margin: 20px">NEW TRAILERS</div>
 
         <div class="newtrailer">
-          <img
-            src="/image/all.jpg"
-            style="
-              height: 190px;
-              width: 100%;
-              border-radius: 10px;
-              object-fit: cover;
-            "
-          />
+          <img src="/image/all.jpg"  />
           <div class="newtrans">
             <i class="fa-solid fa-play"></i>
             ALL
-            <span
-              ><i class="fa-solid fa-star" style="color: yellow"></i>4.8</span
-            >
+            <span><i class="fa-solid fa-star" style="color: yellow"></i>4.8</span>
           </div>
         </div>
         <div class="newtrailer">
-          <img
-            src="/image/barbie-big.png"
-            style="
-              height: 190px;
-              width: 100%;
-              border-radius: 10px;
-              object-fit: cover;
-            "
-          />
+          <img src="/image/barbie-big.png"/>
           <div class="newtrans">
             <i class="fa-solid fa-play"></i>
             Barbie
-            <span
-              ><i class="fa-solid fa-star" style="color: yellow"></i>4.8</span
-            >
+            <span><i class="fa-solid fa-star" style="color: yellow"></i>4.8</span>
           </div>
         </div>
 
-        <div class="upgrade">
-          <h4>UPGRADE PRO+</h4>
-          <p>Try all feature for your account free 1 month</p>
-          <div>Upgrade pro+</div>
-        </div>
-
-        <!-- </div> -->
+      <div class="upgrade">
+        <h4>UPGRADE PRO+</h4>
+        <p>Try all feature for your account free 1 month</p>
+        <div>Upgrade pro+</div>
       </div>
+      </div>
+
+
+
     </div>
-    <script src="/movie.js"></script>
-  </body>
+  </div>
+  <script src="/movie.js"></script>
+</body>
+
 </html>

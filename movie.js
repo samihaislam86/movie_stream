@@ -1,16 +1,33 @@
 console.log("welcome to movie watching");
 //menu
-document.querySelectorAll("ul ul li").forEach(item => {
+document.querySelectorAll("li").forEach(item => {
   item.addEventListener("click", () => {
 
     
-    document.querySelectorAll("ul ul li").forEach(li => {
+    document.querySelectorAll("li").forEach(li => {
       li.classList.remove("selected");
     });
+    
+
 
     item.classList.add("selected");
 
     console.log(item.textContent + " is selected");
+  });
+});
+
+//logout
+document.querySelectorAll(".logout").forEach(item => {
+  item.addEventListener("click", () => {
+
+    
+    item.classList.toggle("selected");
+
+    if (item.classList.contains("selected")) {
+      console.log("Logout selected");
+    } else {
+      console.log("Logout unselected");
+    }
   });
 });
 
